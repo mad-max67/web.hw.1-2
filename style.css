@@ -1,0 +1,54 @@
+body {
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+}
+
+input, button {
+    margin: 5px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+.task-item.completed span {
+    text-decoration: line-through;
+}
+.spinner {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #f3f3f3;
+    border-top: 2px solid #3498db;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: 0 auto;
+}
+
+.spinner.small {
+    width: 16px;
+    height: 16px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.task-item input[type="checkbox"]:disabled,
+.delete-btn:disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+.checkbox-container {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+}
+
+.task-input:disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+}
